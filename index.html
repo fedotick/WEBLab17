@@ -4,36 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEBLab17</title>
-    <link rel="shortcut icon" href="assets/img/logo-white.png" />
+    <link rel="shortcut icon" href="assets/img/logo-white.png"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <div>
-        <button onclick="showDateTime('now')">now</button>
-        <button onclick="showDateTime('yesterday')">yesterday</button>
-        <button onclick="showDateTime('tenYearsAgo')">10 years ago</button>
-        <button onclick="showDateTime('nextWeek')">next week</button>
-    </div>
+    <div style="margin: 0;">
+        <div class="buttons">
+            <button id="btnTask1" class="button-1 active">Task 1</button>
+            <button id="btnTask2" class="button-1">Task 2</button>
+            <button id="btnTask3" class="button-1">Task 3</button>
+            <button id="btnTask4" class="button-1">Task 4</button>
+            <button id="btnTask5" class="button-1">Task 5</button>
+            <button id="btnTask6" class="button-1">Task 6</button>
+            <button id="btnTask7" class="button-1">Task 7</button>
+            <button id="btnTask8" class="button-1">Task 8</button>
+        </div>
 
-    <div>
-        <p id="countdown"></p>
-    </div>
+        <div class="tasks">
+            <div id="task1" class="task visible">
+                <div class="task-section">
+                    <div class="section">
+                        <div class="caption">
+                            <h2>Task 1</h2>
+                        </div>
+                        <div class="fields">
+                            <input type="text" name="task1" id="task1" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div>
-        <input type="text" id="inputDate" name="inputDate">
-        <p id="monthName"></p>
-    </div>
+            <div id="task2" class="task">
+                <div class="task-section">
+                    <div class="section">
+                        <div class="caption">
+                            <h2>Employee salaries</h2>
+                        </div>
+                        <div class="fields">
+                            <input type="text" name="employeeWithMinDeviation" id="employeeWithMinDeviation" placeholder="employee with min deviation" readonly>
+                            <input type="text" name="highestPaidEmployees" id="highestPaidEmployees" placeholder="highest paid employees" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div>
-        <input type="text" id="inputString" name="inputString">
-        <input type="text" id="outputString" name="outputString" readonly>
-    </div>
+            <div id="task3" class="task">
+                <div class="task-section">
+                    <div class="section">
+                        <div class="caption">
+                            <h2>Array</h2>
+                        </div>
+                        <div class="fields">
+                            <input type="text" name="array" id="array">
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="caption">
+                            <h2>Month name</h2>
+                        </div>
+                        <div class="fields">
+                            <input type="text" name="rearrangedArray" id="rearrangedArray" placeholder="¯\_(ツ)_/¯" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div>
-        <input type="text" id="phoneNumber" placeholder="(555) 555-5555">
-        <br>
-        <input type="text" id="countryCode" readonly>
-        <br>
-        <input type="text" id="phone" readonly>
+            <div id="task4" class="task">
+                <div class="task-section">
+                    <div class="section">
+                        <div class="caption">
+                            <h2>Time buttons</h2>
+                        </div>
+                        <div class="fields">
+                            <div class="fields-section">
+                                <button class="button-2" onclick="showDateTime('now')">now</button>
+                                <button class="button-2" onclick="showDateTime('yesterday')">yesterday</button>
+                            </div>
+                            <div class="fields-section">
+                                <button class="button-2" onclick="showDateTime('tenYearsAgo')">10 years ago</button>
+                                <button class="button-2" onclick="showDateTime('nextWeek')">next week</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="task5" class="task">
+                <div class="task-section">
+                    <div class="section">
+                        <div class="caption">
+                            <h2>End of day in</h2>
+                        </div>
+                        <div class="fields">
+                            <span id="countdown" class="text"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="task6" class="task">
+                <div class="task-section">
+                    <div class="section">
+                        <div class="caption">
+                            <h2>Date</h2>
+                            <!-- <span class="material-symbols-outlined span">warning</span> -->
+                        </div>
+                        <div class="fields">
+                            <input type="text" name="inputDate" id="inputDate" placeholder="yyyy.mm.dd">
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="caption">
+                            <h2>Month name</h2>
+                        </div>
+                        <div class="fields">
+                            <input type="text" name="monthName" id="monthName" placeholder="¯\_(ツ)_/¯" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="task7" class="task">
+                <div class="task-section">
+                    <div class="section">
+                        <div class="caption">
+                            <h2>Input string</h2>
+                            <!-- <span class="material-symbols-outlined span">warning</span> -->
+                        </div>
+                        <div class="fields">
+                            <input type="text" id="inputString" name="inputString" placeholder="enter string">
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="caption">
+                            <h2>Reversed words</h2>
+                        </div>
+                        <div class="fields">
+                            <input type="text" id="outputString" name="outputString" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="task8" class="task">
+                <div class="task-section">
+                    <div class="section">
+                        <div class="caption">
+                            <h2>Phone number</h2>
+                            <!-- <span class="material-symbols-outlined span">warning</span> -->
+                        </div>
+                        <div class="fields">
+                            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="(555) 555-5555">
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="caption">
+                            <h2>Components</h2>
+                        </div>
+                        <div class="fields">
+                            <input type="text" id="countryCode" name="countryCode" placeholder="country code" readonly>
+                            <input type="text" id="number" name="number" placeholder="number" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="assets/js/script.js"></script>

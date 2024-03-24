@@ -121,7 +121,7 @@ function getMonthName() {
     const monthNumber = date.getMonth();
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-    document.getElementById('monthName').textContent = months[monthNumber];
+    document.getElementById('monthName').value = months[monthNumber];
 }
 
 // 7
@@ -136,16 +136,16 @@ function reverseWords() {
 }
 
 // 8
-document.getElementById("phoneNumber").addEventListener("input", () => {
-    const phoneNumber = this.value.trim().replace(/\s+/g, ' ');
+document.getElementById('phoneNumber').addEventListener('input', function() {
+    const phoneNumber = this.value.trim();
     
     if (/^\(\d{3}\) \d{3}-\d{4}$/.test(phoneNumber)) {
-        const [countryCode, phone] = phoneNumber.split(" ");
+        const [countryCode, phone] = phoneNumber.split(' ');
 
-        document.getElementById("countryCode").value = countryCode.slice(1, -1);
-        document.getElementById("phone").value = phone;
+        document.getElementById('countryCode').value = countryCode.slice(1, -1);
+        document.getElementById('number').value = phone;
     } else {
-        document.getElementById("countryCode").value = "";
-        document.getElementById("phone").value = "";
+        document.getElementById('countryCode').value = '';
+        document.getElementById('number').value = '';
     }
 });
