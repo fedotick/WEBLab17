@@ -125,15 +125,14 @@ document.getElementById('inputDate').addEventListener('input', function() {
 });
 
 // 7
-document.getElementById('inputString').addEventListener('input', reverseWords);
+document.getElementById('inputString').addEventListener('input', function() {
 
-function reverseWords() {
-    const str = document.getElementById('inputString').value;
+    const str = this.value;
     const words = str.split(" ");
     const reversedWords = words.map(word => word.split("").reverse().join(""));
-
+    
     document.getElementById('outputString').value = reversedWords.join(" ");
-}
+});
 
 // 8
 document.getElementById('phoneNumber').addEventListener('input', function() {
