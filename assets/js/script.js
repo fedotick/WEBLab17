@@ -149,3 +149,26 @@ document.getElementById('phoneNumber').addEventListener('input', function() {
         document.getElementById('number').value = '';
     }
 });
+
+const numberOfButtons = 8;
+
+for (let i = 1; i <= numberOfButtons; i++) {
+    document.getElementById('btnTask' + i).onclick = function() {
+        deactivateButtons();
+        hideTasks();
+        this.className = 'button-1 active';
+        document.getElementById('task' + i).style.display = 'flex';
+    }
+}
+
+function deactivateButtons() {
+    for (let i = 1; i <= numberOfButtons; i++) {
+        document.getElementById('btnTask' + i).className = 'button-1';
+    }
+}
+
+function hideTasks() {
+    for (let i = 1; i <= numberOfButtons; i++) {
+        document.getElementById('task' + i).style.display = 'none';
+    }
+}
