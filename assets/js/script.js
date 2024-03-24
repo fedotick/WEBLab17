@@ -105,8 +105,21 @@ function secondsUntilEndOfDay() {
 
 function updateCountdown() {
     const seconds = secondsUntilEndOfDay();
-    document.getElementById('countdown').innerHTML = seconds;
+    document.getElementById('countdown').textContent = seconds;
 }
 
 updateCountdown;
 setInterval(updateCountdown);
+
+// 6
+document.getElementById('inputDate').addEventListener('input', getMonthName);
+
+function getMonthName() {
+    const inputDate = document.getElementById('inputDate').value;
+    const date = new Date(inputDate);
+
+    const monthNumber = date.getMonth();
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    document.getElementById('monthName').textContent = months[monthNumber];
+}
