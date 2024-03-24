@@ -10,7 +10,7 @@ Repositories with solved tasks.
 
 3. Given a one-dimensional array of integers `A[1..n]`. Write a program that will rewrite into an array `B[1..n]` first in decreasing order all negative elements of array `A`, and then in increasing order all positive elements of array `A`. For example, for `A = (4, -8, 7, -6, 0, -7, 5)`, we get `B = (-6, -7, -8, 0, 4, 5, 7)`.
 
-4. Create a web page containing 4 HTML buttons. When each button is clicked, an alert window should appear displaying the date and time relative to the current date and time. The first button "Now" should display the current date and time, the second button "Yesterday" should display the date and time 24 hours ago, the third button should display the date and time 10 years ago, and the fourth button should display the date and time a week from now.
+4. Create a web page containing 4 HTML buttons. When each button is clicked, an `alert` window should appear displaying the date and time relative to the current date and time. The first button "Now" should display the current date and time, the second button "Yesterday" should display the date and time 24 hours ago, the third button should display the date and time 10 years ago, and the fourth button should display the date and time a week from now.
 
 5. Display on the screen the number of seconds remaining until the end of the day.
 

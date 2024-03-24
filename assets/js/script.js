@@ -134,3 +134,18 @@ function reverseWords() {
 
     document.getElementById('outputString').value = reversedWords.join(" ");
 }
+
+// 8
+document.getElementById("phoneNumber").addEventListener("input", () => {
+    const phoneNumber = this.value.trim().replace(/\s+/g, ' ');
+    
+    if (/^\(\d{3}\) \d{3}-\d{4}$/.test(phoneNumber)) {
+        const [countryCode, phone] = phoneNumber.split(" ");
+
+        document.getElementById("countryCode").value = countryCode.slice(1, -1);
+        document.getElementById("phone").value = phone;
+    } else {
+        document.getElementById("countryCode").value = "";
+        document.getElementById("phone").value = "";
+    }
+});
