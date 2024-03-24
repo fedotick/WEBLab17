@@ -53,8 +53,8 @@ const indexOfMinDeviation = deviations.indexOf(Math.min(...deviations));
 const employeeWithMinDeviation = employees[indexOfMinDeviation].id;
 const highestPaidEmployees = [employees[0].fullName, employees[1].fullName];
 
-console.log(employeeWithMinDeviation);
-console.log(highestPaidEmployees);
+document.getElementById('employeeWithMinDeviation').value = employeeWithMinDeviation;
+document.getElementById('highestPaidEmployees').value = highestPaidEmployees;
 
 // 3
 function rearrangeArray(A) {
