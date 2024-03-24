@@ -67,3 +67,28 @@ const A = [4, -8, 7, -6, 0, -7, 5];
 const B = rearrangeArray(A);
 
 console.log(B); 
+
+// 4
+function showDateTime(type) {
+    let dateTime;
+
+    switch (type) {
+        case 'now':
+            dateTime = new Date();
+            break;
+        case 'yesterday':
+            dateTime = new Date(Date.now() - 24 * 60 * 60 * 1000);
+            break;
+        case 'tenYearsAgo':
+            dateTime = new Date();
+            dateTime.setFullYear(dateTime.getFullYear() - 10);
+            break;
+        case 'nextWeek':
+            dateTime = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+            break;
+        default:
+            dateTime = new Date();
+    }
+
+    alert(dateTime.toLocaleString());
+}
