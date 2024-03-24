@@ -5,7 +5,7 @@ const task1 = {
     css: 'world'
 };
 
-console.log(Object.keys(task1));
+document.getElementById('inputTask1').value = Object.keys(task1);
 
 // 2
 const employees = [
