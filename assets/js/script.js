@@ -92,3 +92,21 @@ function showDateTime(type) {
 
     alert(dateTime.toLocaleString());
 }
+
+// 5
+function secondsUntilEndOfDay() {
+    const now = new Date;
+    const endOfDay = new Date;
+    endOfDay.setHours(23, 59, 59, 999);
+
+    const difference = endOfDay.getTime() - now.getTime();
+    return Math.ceil(difference / 1000);
+}
+
+function updateCountdown() {
+    const seconds = secondsUntilEndOfDay();
+    document.getElementById('countdown').innerHTML = seconds;
+}
+
+updateCountdown;
+setInterval(updateCountdown);
