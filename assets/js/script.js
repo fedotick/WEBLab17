@@ -110,17 +110,19 @@ updateCountdown;
 setInterval(updateCountdown);
 
 // 6
-document.getElementById('inputDate').addEventListener('input', getMonthName);
+document.getElementById('inputDate').addEventListener('input', function() {
+    const inputDate = this.value;
 
-function getMonthName() {
-    const inputDate = document.getElementById('inputDate').value;
-    const date = new Date(inputDate);
-
-    const monthNumber = date.getMonth();
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-    document.getElementById('monthName').value = months[monthNumber];
-}
+    if (/^\d{4}\.\d{2}\.\d{2}$/.test(inputDate)) {
+        const date = new Date(inputDate);
+        const monthNumber = date.getMonth();
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        
+        document.getElementById('monthName').value = months[monthNumber];
+    } else {
+        document.getElementById('monthName').value = '';
+    }
+});
 
 // 7
 document.getElementById('inputString').addEventListener('input', reverseWords);
