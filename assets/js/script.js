@@ -123,3 +123,14 @@ function getMonthName() {
 
     document.getElementById('monthName').textContent = months[monthNumber];
 }
+
+// 7
+document.getElementById('inputString').addEventListener('input', reverseWords);
+
+function reverseWords() {
+    const str = document.getElementById('inputString').value;
+    const words = str.split(" ");
+    const reversedWords = words.map(word => word.split("").reverse().join(""));
+
+    document.getElementById('outputString').value = reversedWords.join(" ");
+}
