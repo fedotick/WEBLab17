@@ -55,3 +55,15 @@ const highestPaidEmployees = [employees[0].fullName, employees[1].fullName];
 
 console.log(employeeWithMinDeviation);
 console.log(highestPaidEmployees);
+
+// 3
+function rearrangeArray(A) {
+    const negatives = A.filter(num => num < 0).sort((a, b) => b - a);
+    const positives = A.filter(num => num >= 0).sort((a, b) => a - b);
+    return [...negatives, ...positives];
+}
+
+const A = [4, -8, 7, -6, 0, -7, 5];
+const B = rearrangeArray(A);
+
+console.log(B); 
