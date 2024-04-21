@@ -18,4 +18,6 @@ Repositories with solved tasks.
 
 7. A string of characters is entered. A group of characters, separated on one or both sides by one or more spaces and not containing spaces inside itself, will be called a word. "Reverse" each word while preserving their order in the string.
 
-8. Write a script that reads a phone number in the format `(555) 555-5555`. The script should use the `split` method of the `String` object to extract the country code (value in parentheses) and the phone number. Display the extracted data in different text fields.
+8. Write a script that reads a phone number in the format `(555) 555-5555`. The script should use the `split` method of the `String` object to extract the country code (value in parentheses) and the phone number. Display the extracted data in different text fields as shown in the image.
+
+   ![image](https://github.com/fedotick/WebLab17/assets/63405911/281557af-767f-4a6a-8e16-eec0b44c73c3)
